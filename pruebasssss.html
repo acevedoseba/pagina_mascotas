@@ -1,0 +1,425 @@
+
+   <!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>seba</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">  
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="assets/css/style.css">
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+ </head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				<div class="header-left">
+					<div class="logo">
+						<a href="index.html"><img src="images/pero.png" height="60 px" alt=""/></a>
+					 </div>
+					 <!--Cambiar en las demas-->
+					<div class="menu">
+						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+						    <ul class="nav" id="nav">
+						    	<li><a href="shop.html">Productos</a></li>
+						    	<li><a href="contact.html">Contaco</a></li>
+								<li><a href="login.html">Ingresa/Registrate</a></li>
+								<li><a href="team.html">Nosotros</a></li>								
+								<div class="clear"></div>
+							</ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				    </div>
+					<!--Cambiar en las demas-->							
+	    		    <div class="clear"></div>
+	    	    </div>
+	            <div class="header_right">
+	    		  <!-- start search-->
+				      <div class="search-box">
+							<div id="sb-search" class="sb-search">
+								<form>
+									<input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+									<input class="sb-search-submit" type="submit" value="">
+									<span class="sb-icon-search"> </span>
+								</form>
+							</div>
+						</div>
+						<!----search-scripts---->
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>
+						<!----//search-scripts---->
+				    <ul class="icon1 sub-icon1 profile_img">
+					 <li><a class="active-icon c1" href="#"> </a>
+						<ul class="sub-icon1 list">
+						  <div class="product_control_buttons">
+						  	<a href="#"><img src="images/edit.png" alt=""/></a>
+						  		<a href="#"><img src="images/close_edit.png" alt=""/></a>
+						  </div>
+						   <div class="clear"></div>
+						  <li class="list_img"><img src="images/1.jpg" alt=""/></li>
+						  <li class="list_desc"><h4><a href="#">"producto aqui"</a></h4><span class="actual">1 x
+                          $12.00</span></li>
+						  <div class="login_buttons">
+							 <div class="check_button"><a href="checkout.html">Ver carrito</a></div>
+							 <div class="login_button"><a href="login.html">Ingresar</a></div>
+							 <div class="clear"></div>
+						  </div>
+						  <div class="clear"></div>
+						</ul>
+					 </li>
+				   </ul>
+		           <div class="clear"></div>
+	       </div>
+	      </div>
+		 </div>
+	    </div>
+	</div>
+     <div class="main">
+      <div class="shop_top">
+	     <div class="container">
+						<form> 
+								<div class="register-top-grid">
+										<h3>PERSONAL INFORMATION</h3>
+                    <div>
+											<span>ID producto<label>*</label></span>
+											<input type="text"  id="inputPrimerNombre">
+											<input type="text"  id="inputIdUsuario" hidden > 
+										</div>	
+										<div>
+											<span>Tipo Productos<label>*</label></span>
+											<input type="text"  id="inputSegundoNombre">
+										</div>
+										<div>
+											<span>Precio<label>*</label></span>
+											<input type="text"  id="inputApellidoPaterno">
+										</div>
+										<div>
+											<span>stock<label>*</label></span>
+											<input type="text" class="form-control" id="inputApellidoMaterno"> 
+										</div>
+										<div>
+											<span>descripcion<label>*</label></span>
+											<input type="text" class="form-control" id="inputDireccion">
+										</div>
+										<div>
+											<span> imagen<label>*</label></span>
+											<input type="text" class="form-control" id="inputEmail" >
+										</div>
+                    <div>
+											<span>estado<label>*</label></span>
+											<input type="text" class="form-control" id="inputPassword">
+										</div>						
+										<div class="clear"> </div>
+								</div>
+								<div class="clear"> </div>
+								<a id="btnAgregarUsuario" class="btn btn-primary">Registrar</a>
+                <a id="btnEditarUsuarioTabla" class="btn btn-success">Editar</a>
+                <a id="btnCancelarEdicion" class="btn btn-secondary">Cancelar</a>
+						</form>
+					</div>
+		   </div>
+	  </div>
+       
+
+
+      <div class="row mt-4">
+        <div class="col-sm-12">
+          <div class="card" style="height: 100%;">
+            <div class="card-body">
+
+              <h5 class="card-title">Listado de Usuarios</h5>
+
+              <!-- Tabla de usuarios -->
+              <div class="table-responsive">
+                <table class="table" id="tablaUsuarios">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">id</th>
+                      <th scope="col">Codigo</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">valor_venta</th>
+                      <th scope="col">stock</th>
+                      <th scope="col">descripcion</th>
+                      <th scope="col">imagen</th>
+                      <th scope="col">estado</th>
+                      <th scope="col">Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Alan</td>
+                      <td>Larry</td>
+                      <td>Brito</td>
+                      <td>Delgado</td>
+                      <td>Delgado</td>
+                      <td>Delgado</td>
+                      <td>Su casa #123, La Florida</td>
+                      <td>
+                        <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-success btnEditarusuario"><i class="fa-solid fa-pencil"></i></button>
+                          <button type="button" class="btn btn-danger btnEliminarUsuario"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    
+                    
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    
+    <!--- Mis scripts -->
+    <script> 
+
+    const API_URL = 'https://6000-ernestoleon-tiendaropaa-1fx2yu17lq6.ws-us51.gitpod.io';
+
+    //cargar tabla con usuarios cargados desde ajax
+    $(document).ready(function(){
+      $('#tablaUsuarios tbody').empty();    
+      $('#btnEditarUsuarioTabla').hide();
+      $('#btnCancelarEdicion').hide();
+      actualizarTabla()
+    });
+
+      //click en .btnEditarusuario
+      $(document).on('click', '.btnEditarusuario', function(){
+        //obtener el id del usuario
+        var idUsuario = $(this).closest('tr').find('th').text();
+        //obtener todo el usuario
+        var producto = $(this).closest('tr').find('td');
+        //obtener los datos del usuario
+        var codigo = producto.eq(0).text();
+        var nombre = producto.eq(1).text();
+        var valor_venta = producto.eq(2).text();
+        var stock = producto.eq(3).text();
+        var descripcion = producto.eq(4).text();
+        var imagen = producto.eq(5).text();
+        var estado = producto.eq(6).text();
+
+        //mostrar los datos del usuario en los inputs
+        $('#inputPrimerNombre').val(codigo);
+        $('#inputSegundoNombre').val(nombre);
+        $('#inputApellidoPaterno').val(valor_venta);
+        $('#inputApellidoMaterno').val(stock);
+        $('#inputDireccion').val(descripcion);
+        $('#inputEmail').val(imagen);
+        $('#inputPassword').val(estado);
+        $('#inputIdUsuario').val(idUsuario);
+
+        $('#btnAgregarUsuario').hide();
+        $('#btnEditarUsuarioTabla').show();
+        $('#btnCancelarEdicion').show();
+      });
+
+
+      //añadir usuario a la lista con jquery
+      $(document).on('click', '#btnAgregarUsuario', function(){
+        //obtener los datos del usuario
+        var codigo = $('#inputPrimerNombre').val();
+        var nombre = $('#inputSegundoNombre').val();
+        var valor_venta = $('#inputApellidoPaterno').val();
+        var stock = $('#inputApellidoMaterno').val();
+        var descripcion = $('#inputDireccion').val();
+        var imagen = $('#inputEmail').val();
+		    var estado = $('#inputPassword').val();
+
+        //cargar a la db mediante ajax mi usuario
+        $.ajax({
+            url: API_URL+'/productos',
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({
+              codigo: codigo,
+              nombre: nombre,
+              valor_venta: valor_venta,
+              stock: stock,
+              descripcion: descripcion,
+              imagen: imagen,
+              estado: estado
+            }),
+            success: function(respuesta){
+                console.log(respuesta);
+                actualizarTabla();
+            }
+        })
+
+      });
+      
+      //borrar usuario de la lista con jquery
+      $(document).on('click', '.btnEliminarUsuario', function(){
+        //eliminar la fila
+        var idUsuario = $(this).closest('tr').find('th').text();
+
+        $.ajax({
+            url: API_URL+'/productos/'+idUsuario,
+            type: 'DELETE',
+            dataType: 'json',
+            data: {
+                id:idUsuario
+            },
+            success: function(respuesta){
+                console.log('Usuario Eliminado')
+                actualizarTabla()
+            }
+
+        })
+
+
+
+      });
+
+      //funcion encontrar el ultimo id de la tabla
+      function obtenerUltimoId(){
+        var ultimoId = $('#tablaUsuarios tr:last th').text();
+        return parseInt(ultimoId) + 1;
+      }
+
+      //editar usuario con ajax
+      $(document).on('click', '#btnEditarUsuarioTabla', function(){
+        //obtener los datos del usuario
+        var codigo = $('#inputPrimerNombre').val();
+        var nombre = $('#inputSegundoNombre').val();
+        var valor_venta = $('#inputApellidoPaterno').val();
+        var stock = $('#inputApellidoMaterno').val();
+        var descripcion = $('#inputDireccion').val();
+        var imagen = $('#inputEmail').val();
+		    var estado = $('#inputPassword').val();
+        var idUsuario = $('#inputIdUsuario').val();
+
+        $.ajax({
+            url: API_URL+'/productos/'+idUsuario,
+            type: 'PUT',
+            contentType: 'application/json',
+            data: JSON.stringify({
+              codigo: codigo,
+              nombre: nombre,
+              valor_venta: valor_venta,
+              stock: stock,
+              descripcion: descripcion,
+              imagen: imagen,
+              estado: estado,
+              id: idUsuario
+            }),
+            success: function(respuesta){
+                console.log('Usuario Modificado');
+                actualizarTabla();
+                limpiarFormulario();
+            }
+        })
+
+      //fin
+      });
+
+      function actualizarTabla(){
+        $('#tablaUsuarios tbody').empty();
+
+        $.ajax({
+          url: API_URL+'/productos',
+          type: 'GET',
+          dataType: 'json',
+          success: function(respuesta){
+          console.log(respuesta);
+            for (var i = 0; i < respuesta.length; i++){
+                var fila = '<tr>' +
+                  '<th scope="row">' + respuesta[i].id + '</th>' +
+                  '<td>' + respuesta[i].codigo + '</td>' +
+                  '<td>' + respuesta[i].nombre + '</td>' +
+                  '<td>' + respuesta[i].valor_venta + '</td>' +
+                  '<td>' + respuesta[i].stock + '</td>' +
+                  '<td>' + respuesta[i].descripcion + '</td>' +
+                  '<td>' + respuesta[i].imagen + '</td>' +
+                  '<td>' + respuesta[i].estado + '</td>' +				          
+                  '<td>' +
+                    '<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">' +
+                      '<button type="button" class="btn btn-success btnEditarusuario"><i class="fa-solid fa-pencil"></i></button>' +
+                      '<button type="button" class="btn btn-danger btnEliminarUsuario"><i class="fa-solid fa-trash"></i></button>' +
+                    '</div>'
+                  '</td>' +
+                '</tr>';
+                $('#tablaUsuarios').append(fila)
+            }
+          }
+        })
+      }
+      $(document).on('click', '#btnCancelarEdicion', function(){
+        limpiarFormulario();
+      })
+      function limpiarFormulario(){
+        $('#inputPrimerNombre').val('');
+        $('#inputSegundoNombre').val('');
+        $('#inputApellidoPaterno').val('');
+        $('#inputApellidoMaterno').val('');
+        $('#inputDireccion').val('');
+        $('#inputEmail').val('');
+        $('#inputPassword').val('');
+        $('#inputIdUsuario').val('');
+
+        $('#btnAgregarUsuario').show();
+        $('#btnEditarUsuarioTabla').hide();
+        $('#btnCancelarEdicion').hide();
+      }
+
+    </script>
+
+  </body>
+</html>
